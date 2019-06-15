@@ -1,6 +1,6 @@
-FROM hypriot/rpi-alpine-scratch:edge
+FROM arm32v7/alpine
 
-ARG TOR_VERSION 0.3.4.9
+ARG TOR_VERSION=0.3.4.9
 EXPOSE 8118 9050
 
 RUN apk update \
