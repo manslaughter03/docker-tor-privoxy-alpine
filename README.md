@@ -5,8 +5,8 @@
 - Create user instead using root user
 
 ```
-docker run -d -p 8118:8118 -p 9050:9050 manslaughter/tor-privoxy-arm32v7-alpine:tagname
-curl --proxy localhost:8118 https://www.google.com
+docker run -d -p 8118:8118 -p 9050:9050 manslaughter/tor-privoxy-arm32v7-alpine:latest
+curl --proxy localhost:8118 https://check.torproject.org/ | cat | grep -m 1 Congratulations | xargs
 ```
 
 Fork of https://github.com/rdsubhas/docker-tor-privoxy-alpine
