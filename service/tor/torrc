@@ -1,1 +1,8 @@
+## Tor opens a SOCKS proxy on port 9050 by default -- even if you don't
+## configure one below. Set "SOCKSPort 0" if you plan to run Tor only
+## as a relay, and not make any local application connections yourself.
 SOCKSPort 0.0.0.0:9050
+
+## Exclude internet-blocking countries
+ExcludeExitNodes {ru},{by},{cn},{kz}
+StrictNodes 1
